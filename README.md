@@ -35,8 +35,8 @@ npx http-server -p 8000
 
 3. **콘솔에서 실행**
 
-* `py(\`print(123)\`)`
-* `py(\`import sys; print(sys.version)\`)`
+* `py('print(123)')`
+* `py('import sys; print(sys.version)')`
   출력은 페이지의 `<pre id="log">` 영역에 표시됩니다.
 
 ---
@@ -139,8 +139,7 @@ py('import json, statistics; print(statistics.mean([1,2,3]))')
 
 ## 확인 체크리스트
 
-* [ ] 네 파일이 같은 폴더에 있음
-* [ ] `http://localhost:8000` 등 **HTTP**로 서비스됨
+* [ ] `http://localhost` 등 **HTTP**로 서비스됨
 * [ ] 콘솔에서 `typeof py === "function"`
 * [ ] `py('import sys; print(sys.version)')`가 정상 출력됨
 
@@ -150,5 +149,3 @@ py('import json, statistics; print(statistics.mean([1,2,3]))')
 
 * CPython 및 표준 라이브러리: 해당 프로젝트 라이선스 따름
 * Emscripten/WebAssembly 런타임: 각 라이선스 따름
-
-필요하면 간단한 UI(에디터 + 실행 버튼) 템플릿도 덧붙일 수 있습니다.
