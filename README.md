@@ -1,6 +1,6 @@
-# Python (CPython 3.14) on WebAssembly — 콘솔 실행 가이드
+# python3.14-wasm 실행 가이드
 
-브라우저에서 **CPython 3.14**를 WASM으로 로드하고, **개발자 콘솔**에서 바로 파이썬 코드를 실행하는 최소 구성입니다.
+브라우저에서 **CPython 3.14**를 WASM으로 로드하고, **DEVTOOL**에서 바로 파이썬 코드를 실행하는 최소 구성입니다.
 
 ---
 
