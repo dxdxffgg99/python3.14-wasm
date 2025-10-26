@@ -35,8 +35,8 @@ npx http-server -p 8000
 
 3. **콘솔에서 실행**
 
-* `py('print(123)')`
-* `py('import sys; print(sys.version)')`
+* ``py(`print(123)`)``
+* ``py(`import sys; print(sys.version)`)``
   출력은 페이지의 `<pre id="log">` 영역에 표시됩니다.
 
 ---
