@@ -1,0 +1,24 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<pre id="log"></pre>
+
+<script type="module">
+  import createModule from './python.mjs';
+  const log = s => (document.getElementById('log').textContent += s + '\n');
+
+  window.Module = await createModule({
+    locateFile: p => p,
+    print: log,
+    printErr: log,
+    noInitialRun: true,
+    preRun(mod) {
+      mod.FS.createPreloadedFile('/', 'python314.zip', 'python314.zip', true, true);
+      mod.ENV.PYTHONHOME = '/';
+      mod.ENV.PYTHONPATH = '/python314.zip';
+      mod.ENV.PYTHONDONTWRITEBYTECODE = '1';
+    },
+  });
+
+  window.py = code => window.Module.callMain(['-S','-c', code]);
+</script>
